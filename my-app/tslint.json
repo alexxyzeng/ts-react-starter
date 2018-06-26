@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts"
+    ]
+  },
+  "rules": {
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "ordered-imports": false,
+    "interface-name": [
+      false,
+      "never-prefix"
+    ]
+  }
+}
