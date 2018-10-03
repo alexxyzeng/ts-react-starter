@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import * as actions from '../actions/index';
-import Hello from '../components/Hello';
+import Hello, { Props } from '../components/Hello';
 import { IStoreState } from '../types/index';
 
 export function mapStateToProps({ enthusiasmLevel, languageName }: IStoreState) {
@@ -18,4 +18,4 @@ export function mapDispatchToProps(dispatch: Dispatch<actions.EnthusiasmAction>)
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Hello);
+export default connect<Props>(mapStateToProps, mapDispatchToProps)(Hello);
